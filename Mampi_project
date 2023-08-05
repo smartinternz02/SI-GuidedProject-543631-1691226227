@@ -1,0 +1,25 @@
+WITH 
+Returns_Union_1(C_row_id, Returned, Order_ID) AS 
+    (
+    SELECT
+        Returns_0._row_id AS C_row_id, 
+        Returns_0.Returned AS Returned, 
+        Returns_0.Order_ID AS Order_ID
+    FROM
+        469674108...Returns_ Returns_0
+    
+    UNION
+    
+    SELECT
+        People0._row_id AS C_row_id, 
+        People0.Person AS Person, 
+        People0.Region AS Region
+    FROM
+        1574519895...People People0
+    )
+SELECT
+    Returns_Union_1.C_row_id AS C0, 
+    Returns_Union_1.Returned AS C1, 
+    Returns_Union_1.Order_ID AS C2
+FROM
+    Returns_Union_1
